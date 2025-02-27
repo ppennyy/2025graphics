@@ -1,0 +1,272 @@
+//week02_8
+ArrayList<Integer> x,y;//先有2個[還沒準備好]的(小的)資料結構，等mousePressed在新增準備
+ArrayList<ArrayList<Integer>> xx = new ArrayList<ArrayList<Integer>>();//大的資料結構
+ArrayList<ArrayList<Integer>> yy = new ArrayList<ArrayList<Integer>>();
+PImage img;
+void setup(){
+  size(400,400);
+  img = loadImage("cute.png");//每次新的檔案，要再把圖[拉進來]
+}//記得把圖檔，(像上週一樣)拉到程式碼裡
+void draw(){
+  background(img);
+  fill(255,200);//半透明的色彩 白色，alpha值是128
+  rect(0,0,400,400);//畫超大的四邊形，全部蓋住
+  //上面是week02_4，下面用迴圈，從資料結構取出來
+  for(int I=0;I<xx.size();I++){//大寫I對應大的資料結構
+    ArrayList<Integer>x=xx.get(I);//取出裡面的小的資料結構
+    ArrayList<Integer>y=yy.get(I);
+    for(int i=1;i<x.size();i++){//小的，再照舊畫
+      line(x.get(i),y.get(i),x.get(i-1),y.get(i-1));
+    }
+  }
+  noFill();
+  strokeWeight(5);
+  draw1();
+}
+void keyPressed(){//小心，注音輸入法，會卡住按鍵，要換英文輸入
+  if(key=='s' || key=='S'){//如果按下英文的小寫or大寫s想save存檔的話
+    for(int I=0;I<xx.size();I++){//大寫I對應大的資料結構
+      ArrayList<Integer>x=xx.get(I);//取出裡面的 小的資料結構
+      ArrayList<Integer>y=yy.get(I);
+      println("beginShape();");//beginShape();
+      for(int i=1;i<x.size();i++){//小的，再照舊畫
+        println("vertex("+x.get(i)+","+y.get(i)+");");
+      }//改再keyPressed()按下s或S十，再全部印!
+      println("endShape();");//endShape();
+    }
+  }
+}
+void mouseDragged(){
+  //println("vertex(mouseX,mouseY;");
+  //println("vertex("+mouseX+","+mouseY+");");//不要在這裡印
+  x.add(mouseX);
+  y.add(mouseY);
+}
+void mousePressed(){ // 滑鼠按下去時，建[新的]資料結構
+  x=new ArrayList<Integer>(); xx.add(x);
+  y=new ArrayList<Integer>(); yy.add(y);
+}
+void draw1(){
+    beginShape();
+vertex(112,91);
+vertex(111,91);
+vertex(110,91);
+vertex(110,93);
+vertex(110,94);
+vertex(110,95);
+vertex(110,96);
+vertex(109,99);
+vertex(108,99);
+vertex(107,99);
+vertex(107,100);
+vertex(106,100);
+vertex(105,101);
+vertex(103,102);
+vertex(102,102);
+vertex(101,103);
+vertex(100,104);
+vertex(99,104);
+vertex(98,104);
+vertex(97,106);
+vertex(95,106);
+vertex(94,106);
+vertex(92,107);
+vertex(91,107);
+vertex(90,107);
+vertex(89,108);
+vertex(87,108);
+vertex(87,109);
+vertex(87,110);
+vertex(85,112);
+vertex(84,113);
+vertex(83,114);
+vertex(83,116);
+vertex(82,116);
+vertex(82,117);
+vertex(81,118);
+vertex(80,120);
+vertex(79,120);
+vertex(79,122);
+vertex(78,123);
+vertex(77,125);
+vertex(77,127);
+vertex(75,128);
+vertex(75,129);
+vertex(75,131);
+vertex(74,132);
+vertex(74,134);
+vertex(73,134);
+vertex(73,135);
+vertex(72,136);
+vertex(72,137);
+vertex(72,138);
+vertex(72,139);
+vertex(72,140);
+vertex(71,141);
+vertex(71,143);
+vertex(70,143);
+vertex(70,144);
+vertex(70,145);
+vertex(69,146);
+vertex(69,147);
+vertex(68,150);
+vertex(67,150);
+vertex(67,151);
+vertex(66,153);
+vertex(66,154);
+vertex(65,156);
+vertex(64,157);
+vertex(63,158);
+vertex(63,159);
+vertex(63,161);
+vertex(62,162);
+vertex(62,163);
+vertex(61,164);
+vertex(61,166);
+vertex(61,167);
+vertex(61,168);
+vertex(61,170);
+vertex(61,171);
+vertex(61,172);
+vertex(61,173);
+vertex(61,174);
+vertex(61,176);
+vertex(61,177);
+vertex(61,178);
+vertex(61,179);
+vertex(61,181);
+vertex(61,182);
+vertex(61,183);
+vertex(61,184);
+vertex(61,186);
+vertex(61,187);
+vertex(62,188);
+endShape();
+beginShape();
+vertex(62,191);
+vertex(62,192);
+vertex(62,193);
+vertex(62,195);
+vertex(62,196);
+vertex(62,197);
+vertex(62,198);
+vertex(62,200);
+vertex(64,202);
+vertex(65,203);
+vertex(65,204);
+vertex(66,205);
+vertex(66,206);
+vertex(67,207);
+vertex(68,209);
+vertex(68,210);
+vertex(70,211);
+vertex(70,213);
+vertex(71,214);
+vertex(71,215);
+vertex(71,216);
+vertex(71,217);
+vertex(71,219);
+vertex(72,219);
+vertex(72,220);
+vertex(72,221);
+vertex(74,222);
+vertex(74,224);
+vertex(74,225);
+vertex(74,226);
+vertex(74,228);
+vertex(75,229);
+vertex(76,230);
+vertex(76,231);
+vertex(78,233);
+vertex(78,234);
+vertex(78,235);
+vertex(78,237);
+vertex(79,238);
+vertex(80,239);
+vertex(80,240);
+vertex(81,242);
+vertex(81,243);
+vertex(82,243);
+vertex(82,244);
+vertex(82,245);
+vertex(83,246);
+vertex(84,247);
+vertex(85,248);
+vertex(85,250);
+vertex(87,250);
+vertex(88,251);
+vertex(89,251);
+vertex(90,251);
+vertex(91,251);
+vertex(93,251);
+vertex(94,251);
+vertex(95,251);
+vertex(96,251);
+vertex(96,252);
+vertex(98,253);
+vertex(98,254);
+endShape();
+beginShape();
+vertex(117,71);
+vertex(116,69);
+vertex(114,66);
+vertex(114,63);
+vertex(113,60);
+vertex(109,59);
+vertex(109,57);
+vertex(109,56);
+vertex(109,55);
+vertex(109,53);
+vertex(109,52);
+vertex(109,51);
+vertex(109,50);
+vertex(110,49);
+vertex(111,49);
+vertex(112,49);
+vertex(113,49);
+vertex(114,48);
+vertex(115,48);
+vertex(115,47);
+vertex(116,47);
+vertex(117,47);
+vertex(118,47);
+vertex(119,47);
+vertex(121,47);
+vertex(121,46);
+vertex(122,46);
+vertex(123,46);
+vertex(125,46);
+vertex(126,46);
+vertex(127,46);
+vertex(128,46);
+vertex(130,46);
+vertex(131,46);
+vertex(132,46);
+vertex(134,46);
+vertex(135,46);
+vertex(136,46);
+vertex(137,46);
+vertex(138,46);
+vertex(139,46);
+vertex(140,46);
+vertex(141,47);
+vertex(142,48);
+vertex(143,48);
+vertex(144,51);
+vertex(145,51);
+vertex(148,52);
+vertex(148,53);
+vertex(149,54);
+vertex(150,56);
+vertex(151,57);
+vertex(152,58);
+vertex(152,59);
+vertex(152,61);
+vertex(152,62);
+vertex(152,63);
+vertex(152,64);
+vertex(152,65);
+vertex(152,67);
+endShape();
+
+}
