@@ -1,0 +1,17 @@
+這目錄的軟體, 讓學生上課/回家時, 自己練習安裝, 不用事先安裝。
+
+請您幫忙(整個目錄)放在 桌面 or D: 即可, 感謝您。
+
+資傳系葉正聖敬上 2022/5/16
+
+說明:
+1. arduino-1.8.15-windows.exe 是 Arduino IDE
+2. CH341SER.EXE 是 MakerUNO 的 USB Serial driver
+3. codeblocks-17.12mingw-setup.exe 可與「瘋狂程設」及「FreeGLUT」配合 (不能用新版CodeBlocks)
+4. CodingFrenzy@mcu02.arping.me.zip 是瘋狂程設(資傳)圓山碼場, 目前各系分流, 資傳系需裝此版
+5. freeglut-MinGW-3.0.0-1.mp.zip 是 FreeGLUT for Windows (MinGW)版, 可開發 OpenGL程式
+6. Git-2.30.1-64-bt.exe 是 Git for Windows, 讓學生練習安裝、使用、熟悉GitHub服務
+7. OpenCV-2.1.0-win32-vs2008.exe 這個舊版可與許多編譯器相容
+8. PDE_zh.properties 是 Processing 的中文介面翻譯, 放著備用
+9. processing-4.0b8-windows-x64.zip 是 Processing 4 的最新版, 裡面已放中文介面翻譯, 解壓縮即可使用
+10. Windows 10 Photo Viewer Restore.reg 可修復 Windows 10 無法啟用「相片檢視器」的問題
